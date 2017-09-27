@@ -36,7 +36,6 @@ Rails.application.configure do
   config.action_mailer.perform_deliveries = true
   
   #Configurations for mailer
-  config.action_mailer.default_url_options = {host: "localhost:3000"}
   
   #Uncomment smtp instead of letter_opener to actually send emails
   config.action_mailer.delivery_method = :letter_opener

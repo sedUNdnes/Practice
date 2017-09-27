@@ -35,7 +35,7 @@ gem 'jbuilder', '~> 2.5'
 
 
 # Letter_opener gem for faking deliver method on a development environment
-gem "letter_opener", :group => :development
+gem "letter_opener_web", :group => :development
 # Dotenv for hiding variables.
 gem 'dotenv-rails', groups: [:development, :test]
 group :development, :test do
