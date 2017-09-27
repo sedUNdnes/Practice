@@ -28,8 +28,8 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        #UserMailer.welcome_email(@user).deliver_later # enqueue email delivery as a job through Active Job
-        UserMailer.welcome_email_with_attachments(@user).deliver_later
+        UserMailer.welcome_email(@user).deliver_later # enqueue email delivery as a job through Active Job
+        #UserMailer.welcome_email_with_attachments(@user).deliver_later
         #UserMailer.welcome_email(@user).deliver_later(wait_until: 10.hours.from_now)
         #UserMailer.welcome_email(@user).deliver_later(wait: 1.hour)
         #UserMailer.welcome_email(@user).deliver_now! #  without checking perform_deliveries and raise_delivery_errors
