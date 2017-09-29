@@ -66,7 +66,7 @@ class UserMailer < ApplicationMailer
     email_with_name = %("#{@user.name}" <#{@user.email}>)
     mail(to: email_with_name = %("#{@user.name}" <#{@user.email}>), subject: 'Welcome with name')
   end
-  
+
   def receiving_emails(user)
     @user = user
     @url  = 'https://ataraxia-sedundnes.herokuapp.com/'
