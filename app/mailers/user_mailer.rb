@@ -52,4 +52,12 @@ class UserMailer < ApplicationMailer
          delivery_method_options: delivery_options)
   end
   
+  #Plain mailer invoked from the controller
+  def without_template_rendering(user, email_body)
+    mail(to: user.email,
+         body: email_body,
+         content_type: "text/html",
+         subject: "Already rendered!")
+  end
+  
 end
