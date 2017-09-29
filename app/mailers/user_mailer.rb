@@ -39,4 +39,17 @@ class UserMailer < ApplicationMailer
     mail(to: @user.email, subject: 'Check this URL')
   end
   
+  #This can be setted with your own mail, passed in the needed controller
+  def user_dynamic(user, company)
+    @car = car
+    delivery_options = { user_name: company.smtp_user,
+                         password: company.smtp_password,
+                         address: company.smtp_host,
+                         delivery_method: smtp
+                         }
+    mail(to: @car.email,
+         subject: "Look how we're changing the delivery options",
+         delivery_method_options: delivery_options)
+  end
+  
 end
