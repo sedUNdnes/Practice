@@ -6,4 +6,4 @@ en:
   users:
     new:
         sign_up: "Sign up here!"
-  user_successfully_created: User successfully created
+  user_successfully_created: User was successfully created
