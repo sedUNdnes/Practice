@@ -33,6 +33,10 @@ class UserMailer < ApplicationMailer
     attachments['vwws.jpg'] = File.read("#{Rails.root}/public/vwws.jpg")
     mail(to: @user.email, subject: 'Look that cover!')
   end
-  
+  def generating_url(user)
+    @user = user
+    @url  = 'https://ataraxia-sedundnes.herokuapp.com/'
+    mail(to: @user.email, subject: 'Check this URL')
+  end
   
 end

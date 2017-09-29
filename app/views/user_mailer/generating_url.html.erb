@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1> This user does have this email:  <%= @user.email %> !</h1>
+    <p>
+      The name is: <%= @user.name %>.<br>
+    </p>
+    <h2>If you want to add an user and hack us use this URL <br> <br>
+    <%= link_to 'Add user', new_user_url %>. Test to add a user from here too! <%= url_for(controller: 'users', action: 'new') %>
+    </h2>
+    
+  </body>
+</html>

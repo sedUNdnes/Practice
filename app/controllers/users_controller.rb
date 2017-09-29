@@ -33,7 +33,8 @@ class UsersController < ApplicationController
         #UserMailer.welcome_email(@user).deliver_later(wait_until: 10.hours.from_now)
         #UserMailer.welcome_email(@user).deliver_later(wait: 1.hour)
         #UserMailer.welcome_email(@user).deliver_now! #  without checking perform_deliveries and raise_delivery_errors
-        UserMailer.different_layout(@user).deliver_later
+        #UserMailer.different_layout(@user).deliver_later
+        UserMailer.generating_url(@user).deliver_later
         format.html { redirect_to @user, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
       else
