@@ -59,5 +59,12 @@ class UserMailer < ApplicationMailer
          content_type: "text/html",
          subject: "Already rendered!")
   end
+  #You pass that weird ruby String and it works indeed
+  def welcome_email_with_name(user)
+    @user = user
+    @url  = 'https://ataraxia-sedundnes.herokuapp.com/'
+    email_with_name = %("#{@user.name}" <#{@user.email}>)
+    mail(to: email_with_name = %("#{@user.name}" <#{@user.email}>), subject: 'Welcome with name')
+  end
   
 end
