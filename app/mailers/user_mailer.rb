@@ -1,6 +1,6 @@
 class UserMailer < ApplicationMailer
   
-  layout 'layout_example'
+  #layout 'layout_example'
   def different_layout(user)
     mail(to: user.email) do |format|
       format.html { render layout: 'layout_example' }
