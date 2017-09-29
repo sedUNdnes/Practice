@@ -7,3 +7,4 @@ es:
   users:
     new:
         sign_up: "¡Regístrate aquí!"
+  user_successfully_created: Usuario creado exitosamente

@@ -38,7 +38,7 @@ class UsersController < ApplicationController
         #UserMailer.user_dynamic(@user).deliver_later
         #UserMailer.without_template_rendering(@user).deliver_later
         UserMailer.welcome_email_with_name(@user).deliver_later
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
+        format.html { redirect_to @user, notice: I18n.t('user_successfully_created') }
         format.json { render :show, status: :created, location: @user }
       else
         format.html { render :new }
