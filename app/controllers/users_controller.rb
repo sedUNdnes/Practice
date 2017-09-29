@@ -28,11 +28,12 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        UserMailer.welcome_email(@user).deliver_later # enqueue email delivery as a job through Active Job
+        #UserMailer.welcome_email(@user).deliver_later # enqueue email delivery as a job through Active Job
         #UserMailer.welcome_email_with_attachments(@user).deliver_later
         #UserMailer.welcome_email(@user).deliver_later(wait_until: 10.hours.from_now)
         #UserMailer.welcome_email(@user).deliver_later(wait: 1.hour)
         #UserMailer.welcome_email(@user).deliver_now! #  without checking perform_deliveries and raise_delivery_errors
+        UserMailer.different_layout(@user).deliver_later
         format.html { redirect_to @user, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
       else
