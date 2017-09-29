@@ -1,0 +1,9 @@
+---
+es:
+  activerecord:
+    attributes:
+      user:
+        email: Correo electrónico
+  users:
+    new:
+        sign_up: "¡Regístrate aquí!"

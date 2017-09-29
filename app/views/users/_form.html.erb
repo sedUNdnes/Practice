@@ -12,7 +12,8 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :email %>
+    <%# f.label :email %>
+    <%= User.human_attribute_name(:email) %><br />
     <%= form.text_field :email, id: :user_email %>
   </div>
 

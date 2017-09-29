@@ -9,6 +9,11 @@
   </head>
 
   <body>
+    <nav>
+      <%= link_to_unless_current 'EN', locale: "en" %> |
+      <%= link_to_unless_current 'ES', locale: "es" %>
+    </nav>
+    
     <%= yield %>
   </body>
 </html>
